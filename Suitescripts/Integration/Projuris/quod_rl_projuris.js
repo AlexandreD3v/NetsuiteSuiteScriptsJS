@@ -1,11 +1,11 @@
 /**
  * @NApiVersion 2.x
  * @NScriptType Restlet
- * Review - Alexandre J. Corrêa <alexandre.correa@quod.com.br>
+ * Review - Alexandre J. Corrêa <alexandre.correa@.com.br>
  * @since 13/07/2022
  * @version 2.0
  */
-define(["./RLProjurisModules/quod_mod_vendor.js", "./RLProjurisModules/quod_mod_purchaseorder.js", "./RLProjurisModules/quod_mod_acs_bankaccount.js", "N/log", "./RLProjurisUtils/quod_rl_projuris_utils.js", "./RLProjurisEnums/quod_enum_rl_projuris.js"],
+define(["./RLProjurisModules/_mod_vendor.js", "./RLProjurisModules/_mod_purchaseorder.js", "./RLProjurisModules/_mod_acs_bankaccount.js", "N/log", "./RLProjurisUtils/_rl_projuris_utils.js", "./RLProjurisEnums/_enum_rl_projuris.js"],
  function (vendorModule, poModule, accModule, log, utils, rlEnum) {
     var objRespRestlet = {};
     /**
