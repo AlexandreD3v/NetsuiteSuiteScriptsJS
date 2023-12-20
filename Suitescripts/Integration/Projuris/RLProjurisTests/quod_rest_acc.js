@@ -1,13 +1,13 @@
 /**
  * @NApiVersion 2.x
  * @NScriptType Restlet
- * Review - Alexandre J. Corrêa <alexandre.correa@quod.com.br>
+ * Review - Alexandre J. Corrêa <alexandre.correa@.com.br>
  * @since 13/07/2022
  * @version 2.0
  */
-define(["require", "exports", "N/log", "../RLProjurisModules/quod_mod_acs_bankaccount"], function (require, exports, log, acc) {
+define(["require", "exports", "N/log", "../RLProjurisModules/_mod_acs_bankaccount"], function (require, exports, log, acc) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    Object.defineProperty(exports, "_esModule", { value: true });
     exports.post = void 0;
     /**
      * Handles the incoming POST request to create or update an ACS bank account.

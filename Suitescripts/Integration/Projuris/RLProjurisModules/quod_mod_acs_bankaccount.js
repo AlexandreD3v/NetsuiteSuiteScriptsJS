@@ -4,7 +4,7 @@
  * @since 13/07/2022
  * @version 2.0
  */
-define(["N/record", "N/log", "N/search", "../RLProjurisEnums/quod_enum_rl_projuris"],
+define(["N/record", "N/log", "N/search", "../RLProjurisEnums/_enum_rl_projuris"],
     function (record, log, search, rlEnum) {
         /**
          * Creates a record for ACS Bank Account.

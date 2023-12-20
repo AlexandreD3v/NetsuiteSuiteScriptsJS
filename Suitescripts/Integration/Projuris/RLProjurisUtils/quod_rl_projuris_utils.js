@@ -4,7 +4,7 @@
  * @NApiVersion 2.x
  * @NModuleScope Public
  */
-define([ "N/log", "N/file", "N/record", "N/format", "../RLProjurisEnums/quod_enum_rl_projuris"], 
+define([ "N/log", "N/file", "N/record", "N/format", "../RLProjurisEnums/_enum_rl_projuris"], 
 function (log, file, record, format, rlEnum) {
     /**
      * Handles errors and returns an error message.

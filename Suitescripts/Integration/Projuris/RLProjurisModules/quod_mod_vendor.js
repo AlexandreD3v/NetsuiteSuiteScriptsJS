@@ -1,9 +1,9 @@
 /**
  * @NApiVersion 2.0
- * Review - Alexandre J. Corrêa <alexandre.correa@quod.com.br>
+ * Review - Alexandre J. Corrêa <alexandre.correa@.com.br>
  * @since 13/07/2022
  */
-define(["N/record", "N/log", "N/search", "../RLProjurisEnums/quod_enum_rl_projuris.js"],
+define(["N/record", "N/log", "N/search", "../RLProjurisEnums/_enum_rl_projuris.js"],
     function (record, log, search, rlEnum) {
         /**
          * Creates a Vendor record in NetSuite.

@@ -1,13 +1,13 @@
 /**
  * @NApiVersion 2.1
- * @author Rafael Oliveira <rafael.oliveira@quod.com.br>
+ * @author Rafael Oliveira <rafael.oliveira@.com.br>
  * @since 19/05/2021
  * @version 1.0
- * Review - Alexandre J. Corrêa <alexandre.correa@quod.com.br>
+ * Review - Alexandre J. Corrêa <alexandre.correa@.com.br>
  * @since 13/07/2022
  * @version 2.0
  */
-define(["N/record", "N/log", "N/search", "N/runtime", "../RLProjurisUtils/quod_rl_projuris_utils", "../RLProjurisEnums/quod_enum_rl_projuris"], 
+define(["N/record", "N/log", "N/search", "N/runtime", "../RLProjurisUtils/_rl_projuris_utils", "../RLProjurisEnums/_enum_rl_projuris"], 
 function (record, log, search, runtime, utils, rlEnum) {
     /**
      * Creates a Purchase Order record in NetSuite.
@@ -25,8 +25,8 @@ function (record, log, search, runtime, utils, rlEnum) {
                 isDynamic: true,
             }), formattedDueDate = utils.formatDate(poObj.dueDate), idPurchaseOrder = 0;
             // Set values for the Purchase Order record.
-            createPurchaseOrder.setValue("customform", runtime.getCurrentScript().getParameter({ name: 'custscript_quod_form' }))
-                .setValue("employee", poObj.employee > 0 ? poObj.employee : runtime.getCurrentScript().getParameter({ name: 'custscript_quod_std_employee' }))
+            createPurchaseOrder.setValue("customform", runtime.getCurrentScript().getParameter({ name: 'custscript_form' }))
+                .setValue("employee", poObj.employee > 0 ? poObj.employee : runtime.getCurrentScript().getParameter({ name: 'custscript_std_employee' }))
                 .setValue("externalid", poObj.externalid)
                 .setValue("entity", idVendor)
                 .setValue("duedate", formattedDueDate)
@@ -42,7 +42,7 @@ function (record, log, search, runtime, utils, rlEnum) {
             // Save the Purchase Order record.
             idPurchaseOrder = createPurchaseOrder.save();
             // Add an attachment to the Purchase Order.
-            var checkAddAtt = utils.adicionarAnexo(poObj.anexo, idPurchaseOrder, runtime.getCurrentScript().getParameter({ name: 'custscript_quod_folder_projuris' })), attchamentStatus = checkAddAtt.cod < 0 ? { msg: checkAddAtt.msg, obj: checkAddAtt, externalId: poObj.externalid } : "Sucess";
+            var checkAddAtt = utils.adicionarAnexo(poObj.anexo, idPurchaseOrder, runtime.getCurrentScript().getParameter({ name: 'custscript_folder_projuris' })), attchamentStatus = checkAddAtt.cod < 0 ? { msg: checkAddAtt.msg, obj: checkAddAtt, externalId: poObj.externalid } : "Sucess";
             // Update the Purchase Order with a saved attachment.
             var idSavedAtt = record.load({ id: idPurchaseOrder, type: record.Type.PURCHASE_ORDER }).setValue("custbodydocumento_fiscal_recebido", true).save();
             // Set the return value based on the saved ID or an error code.
